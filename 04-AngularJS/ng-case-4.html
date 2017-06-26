@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+	<title>Hello World in AngularJS</title>
+     <script src="http://apps.bdimg.com/libs/angular.js/1.2.6/angular.min.js">
+    </script>
+</head>
+
+<body ng-controller="TodoController">
+
+  <p>全栈开发技术</p>
+ 
+  <ul>
+    <li ng-repeat="todo in todos">
+      <input type="checkbox" ng-model="todo.completed">
+      {{ todo.name }} 
+    </li>
+  </ul>
+
+  <script>
+
+   angular.module('myApp', [])
+   .controller('TodoController', ['$scope', function($scope){
+      $scope.todos = [
+        { name: '掌握 HTML/CSS/Javascript', completed: true },
+        { name: '学习 AngularJS', completed: false },
+        { name: '熟悉 NodeJS ', completed: true },
+        { name: '接触 ExpressJS', completed: false },
+        { name: '搭建 MongoDB database', completed: false },
+        ]
+    }]);
+
+  </script>
+
+</body>
+
+</html>
+

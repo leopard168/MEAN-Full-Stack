@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app >
+<head>
+	<title>Hello World in AngularJS</title>
+     <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js">
+    </script>
+
+</head>
+<body>
+
+  <div ng-controller= 'MyController'>
+     <p> person对象是： {{ person }}</p>
+     <p> person对象的属性name是：{{ person.name }}</p>
+  </div>
+
+  <script >
+
+  function MyController($scope){
+
+       $scope.person = {
+         name: "张三"
+       }
+     };
+
+    // var app = angular.module('myAPP',[]);
+    // app.controller('MyController',function($scope) {
+    //    $scope.person = {
+    //      name: "张三"
+    //    }
+    //   }
+    //);
+  </script>
+
+</body>
+</html>

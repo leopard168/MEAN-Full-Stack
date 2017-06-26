@@ -1,0 +1,7 @@
+{
+  "name": "express-parameters",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.10.2"
+  }
+}
